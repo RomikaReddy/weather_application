@@ -89,3 +89,14 @@
 .icon{
     margin-top: 10px;
 }
+.temp-min
+{
+    font-size:22px;
+    color:rgba(255, 255, 255, 0.842);
+    size:6px;
+    /* padding-top:30px; */
+    /* padding-left:60px; */
+    float:right;
+    /* padding-right: 50px; */
+    padding-bottom: 80%;
+}

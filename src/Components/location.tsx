@@ -28,11 +28,13 @@ const Weather = () => {
     const wind = document.getElementsByClassName("wind-rate");
     const temp = document.getElementsByClassName("weather-temp");
     const location = document.getElementsByClassName("weather-location");
+    const mintemp=document.getElementsByClassName("temp-min");
 
     humidity[0].innerHTML = data.main.humidity + "%";
     wind[0].innerHTML = data.wind.speed + "m/s";
     temp[0].innerHTML = (data.main.temp - 273.15).toFixed(2) + "<span style='color: GrayText;'>°C</span>";
     location[0].innerHTML = data.name;
+    mintemp[0].innerHTML=(data.main.temp_min-273.15).toFixed(2)+"<span style='color:GrayText;'>/</span>";
 
     if (data.weather[0].icon === "01d" || data.weather[0].icon === "o1n") {
       setWicon(clear);
@@ -86,7 +88,9 @@ const Weather = () => {
       <div className="weather-image">
         <img src={wicon} alt="" style={{width:'80px'}}></img>
       </div>
-      <div className="weather-temp">24<span style={{color:"GrayText"}}>°C</span></div>
+      <div className="weather-temp">24<span style={{color:"GrayText"}}>°C</span>
+      </div>
+      <div className="temp-min" >16</div>
       <div className="weather-location">Chennai</div>
       <div className="data-container">
         <div className="element">
